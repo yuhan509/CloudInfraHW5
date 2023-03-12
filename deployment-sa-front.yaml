@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: sa-front
-        image: yuhan509/cloudinfra-hw5-front:0.3
-        imagePullPolicy: Never
+        image: yuhan509/cloudinfra-hw5-front:1.0
         ports:
         - containerPort: 3001

@@ -17,7 +17,6 @@ spec:
       containers:
       - name: sa-webapp
         image: yuhan509/cloudinfra-hw5-webapp:1.0
-        imagePullPolicy: Never
         ports:
         - containerPort: 8080
         env:
