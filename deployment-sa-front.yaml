@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sa-front-deployment
+  labels:
+    app: sa-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sa-front
+  template:
+    metadata:
+      labels:
+        app: sa-front
+    spec:
+      containers:
+      - name: sa-front
+        image: yuhan509/cloudinfra-hw5-front:0.3
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3001

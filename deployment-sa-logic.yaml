@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sa-logic-deployment
+  labels:
+    app: sa-logic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sa-logic
+  template:
+    metadata:
+      labels:
+        app: sa-logic
+    spec:
+      containers:
+      - name: sa-logic
+        image: yuhan509/cloudinfra-hw5-logic:0.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
